@@ -1,8 +1,19 @@
+<?php 
+   $name = $POST['name'];
+   $email = $POST['email'];
+   $phone = $POST['phone'];
+   $message = $POST['message'];
+   if(empty($name) OR empty($email) OR empty($phone) OR empty($message)){
+   	header("Location:https://bimalthapamagar.com.np/");
+   	exit;
+   }
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>Bimal Thapa Magar | Thank You</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>

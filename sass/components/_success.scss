@@ -15,15 +15,17 @@
        border-radius:5px;
        background-image:linear-gradient(90deg,#d8e9ef 0%,#d8e9ef 50%,#c9d6de 50%);
        @include respond(phone){
-       	width:35%;
+       	width:50%;
        }
+       // @media only screen and (max-width:800px){
+       // 	width:35%;
+       // }
        @include respond(small-phone){
-       	width:45%;
        	height:45%;
        }
        @include respond(phone-xs){
-       	width:50%;
-       	height:35%;
+       	width:65%;
+       	height:40%;
        }
 	}
 	&__text {
@@ -32,7 +34,7 @@
 	}
 	&__figure {
         height:10rem;
-       width:10rem;
+        width:10rem;
 	}
 	&__img {
        height:100%;
