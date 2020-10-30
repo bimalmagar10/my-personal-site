@@ -12,11 +12,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-<<<<<<< HEAD:success.php
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-=======
-	<meta http-equiv="X-UA-Compatible" content="IE=edge
->>>>>>> c8dcd216b2b75d4dca3f678f48a3fce0e99f3572:success.html
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>Bimal Thapa Magar | Thank You</title>
 	<link rel="stylesheet" href="css/style.css">
