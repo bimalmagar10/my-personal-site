@@ -234,15 +234,14 @@ input[type="submit"] {
   background-image: linear-gradient(90deg, #d8e9ef 0%, #d8e9ef 50%, #c9d6de 50%); }
   @media only screen and (max-width: 50em) {
     .success__content {
-      width: 35%; } }
+      width: 50%; } }
   @media only screen and (max-width: 37.5em) {
     .success__content {
-      width: 45%;
       height: 45%; } }
   @media only screen and (max-width: 25.875em) {
     .success__content {
-      width: 50%;
-      height: 35%; } }
+      width: 65%;
+      height: 40%; } }
 
 .success__text {
   text-align: center;
