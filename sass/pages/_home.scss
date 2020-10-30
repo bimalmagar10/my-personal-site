@@ -22,6 +22,11 @@
 	@extend %section;
 	background-color: $color-primary-light;	
 }
+.section-success {
+	position:relative;
+	height:100vh;
+	background-color:$color-primary;
+}
 .progress-line {
 	position: fixed;
 	width:0%;
