@@ -1,0 +1,33 @@
+.header {
+	height: 100vh;
+	padding: 0 7rem 4rem 7rem;
+	background-image: url(../sass/vendor/img/hero.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 90%;
+	// background-color:#dededc;
+	@include respond(small-phone){
+		padding: 3.5rem;
+		background-position: 80%;
+	}
+	&__box {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.logo {
+       &-box {
+         width: 25rem;
+         height: 20rem;
+         @include respond(small-phone){
+         	width: 20rem;
+         	height: 15rem;
+         }
+       }
+       &__img {
+       	height: 100%;
+       width:100%;
+       }
+	}
+}

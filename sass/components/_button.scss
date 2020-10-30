@@ -1,0 +1,25 @@
+.btn {
+	&:link,
+	&:visited {
+		color:#fff !important;
+		background-color: $color-primary-dark-2;
+		padding: 1.5rem 2rem;
+	}
+	&:hover,
+	&:active {
+        transform: scale(.96);
+	}
+}
+input[type="submit"]{
+	background-color: $color-primary;
+	border: none;
+	color: #fff;
+	padding: 3rem 3.5rem;
+	transition: transform .3s ease-out;
+	cursor: pointer;
+	font-size: 1.8rem;
+	letter-spacing: 1px;
+	&:hover {
+		transform: scale(0.96);
+	}
+}

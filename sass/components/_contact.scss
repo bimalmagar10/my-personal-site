@@ -1,0 +1,67 @@
+.contact {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	@include respond(phone){
+		flex-direction: column;
+	}
+	&__picture {
+      flex: 0 0 50%;
+      visibility: hidden;
+      @include respond(phone){
+      	flex: 1;
+      	margin-bottom: 10rem;
+      }
+	}
+	&__img {
+      width: 70%;
+      height: auto;
+      @include respond(tab-port){
+      	width: 90%;
+      }
+      @include respond(phone){
+      	width: 100%;
+      }
+	}
+	&__details {
+      visibility: hidden;
+      flex: 0 0 50%;
+	}
+	&__message {
+       font-size: 1.8rem;
+	}
+	&__email {
+		&:link,
+		&:visited {
+	      color: $color-primary;
+	      opacity: 1;
+	      transition: opacity .4s ease;
+		}
+		&:hover,
+		&:active {
+			opacity: 0.7;
+		}
+    }
+	&__form {		
+		&--item {
+           &:not(:last-child){
+           	margin-bottom: 3rem;
+           }
+		}
+		&--input {
+          display: block;
+          outline: none;
+          width: 100%;
+          padding: 1rem;
+          border: 1px solid #fff;
+          &::-webkit-input-placeholder {
+  			font-family: sans-serif;
+  			letter-spacing: .5px;
+		  }
+		  &:focus {
+			outline-offset: 5px;
+			outline: 2px solid $color-secondary;
+		  }
+		}
+	}
+}

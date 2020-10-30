@@ -1,0 +1,70 @@
+%section {
+	padding: 15rem 7rem;
+	background-color: $color-tertiary;
+	@include respond(small-phone){
+  		padding: 10rem 3.5rem;
+	}
+}
+.section-about {	
+	@extend %section;
+}
+.section-education {
+	background-color: $color-tertiary;
+	padding: 4rem 7rem;	
+	@include respond(small-phone){
+		padding: 3rem 3.5rem;
+	}
+}
+.section-works {
+	@extend %section;
+}
+.section-contact {
+	@extend %section;
+	background-color: $color-primary-light;	
+}
+.progress-line {
+	position: fixed;
+	width:0%;
+	height:.8rem;
+	background-color: $color-primary;
+	z-index: 100;
+}
+.icon-bar {
+	position:fixed;
+	top: 50%;
+	& a:link,
+	  a:visited {
+		display: block;
+		font-size:3rem;
+		padding: 1rem 1.5rem;
+		text-align:center;
+		cursor:pointer;
+		text-decoration:none;
+		transition:all .3s;
+		width:100%;
+		@include respond(small-phone){
+			font-size:2rem;
+			padding:.5rem 1rem;
+		}
+    }
+    & .facebook {
+		color:#fff;
+		background-color:#3B5998;
+		margin-bottom:1rem;
+		@include respond(small-phone){
+			margin-bottom:.5rem;
+		}
+    }
+    & .instagram {
+	    color:#fff;
+	    background-image:linear-gradient(to right bottom, #8a3ab9 ,#e95950);
+    }
+
+    & a:hover,
+      a:active {
+       background-image:none;
+       background-color:#000;
+       width:140%;
+    }
+}
+

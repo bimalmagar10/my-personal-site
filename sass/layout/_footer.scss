@@ -1,0 +1,62 @@
+.footer {
+	padding: 5rem;
+	color: #fff;
+	background-color: $color-primary-dark-1;
+	&-box {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		& > *:not(:last-child){
+			margin-bottom: 4rem;
+		}
+		font-weight: 300;
+		@include respond(tab-port){
+			width: 100%;
+		}
+	}
+	&__signature {
+		list-style: none;
+		font-size:2rem;
+		text-align: center;
+		& li {
+			display: inline-block;
+			padding:0 1rem;
+			letter-spacing: 1px;
+			&:not(:last-child){
+				border-right: 2px solid #fff;
+			}
+		}
+	}
+	&__message {
+       font-size: 2rem;
+       text-align: center;
+	}
+	&__policies {
+       font-size: 1.5rem;
+       text-align: center;
+	}
+	&__links {
+		& > * {
+			padding: 0 1rem .2rem 1rem;
+			text-decoration: underline;
+			opacity: 1;
+		}
+		& > *:hover {
+			opacity: .8
+		}
+		& > *:not(:last-child){
+			border-right: 2px solid #fff;
+		}   
+	}
+	&__privacy {
+       display: inline-block;
+       color: currentColor;       
+	}
+	&__terms {
+	   display: inline-block;
+	   color: currentColor;	   
+	}
+	&__copyright {
+       line-height:2;
+	}
+}

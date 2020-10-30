@@ -1,0 +1,122 @@
+.nav {
+    position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    &__mobile-nav {
+        display: none;
+        cursor: pointer;
+        & i{
+            font-size: 6rem;
+            color: $color-secondary;
+            z-index: 1000;
+        } 
+        @include respond(tab-port){
+            display: inline-block;
+        }
+    }
+	&__list {
+		list-style: none;   
+		&--item {
+    		display: inline-block;
+    		position: relative;
+    		&:not(:last-child){
+    			margin-right: 3rem;
+    			padding-bottom:1rem;
+    			&::before {
+    			content: "";
+    			height: 2px;
+    			width:0%;
+    			background-color: $color-primary;
+    			position: absolute;
+    			left: 0;
+    			bottom: 0; 
+    			transition: width .3s ease-out;  			
+    		    }
+                 
+    		}
+    		&:hover {
+    			&:not(:last-child){
+    			&::before {
+    			 	width:100%;		
+    		    } 
+    		    }   			
+    		}
+    	}
+    	@include respond(tab-port){
+            display: none;
+        }
+
+		}
+	
+	&__link {
+		&:link,
+		&:visited {
+		text-decoration: none;
+		color: $color-secondary;
+		font-size: 1.6rem;
+		display: inline-block;
+		letter-spacing: 1px;
+		font-weight: 300;
+		transition: all .4s ease-out;
+	    }
+	    &:hover,
+	    &:active {
+	    	color: $color-primary;
+	    }
+	}
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all .4s;
+    z-index: 100;
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter: blur(10px);
+    &-content {
+        position:relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        & .js--link{
+            display: block;
+            text-decoration: none;
+            color: $color-secondary;
+            font-size: 4rem;
+            transition: all .3s;
+            cursor: pointer;
+            padding: 1.5rem 2rem;
+            &:last-child {
+               margin-top: 3rem;
+            }
+        }
+        & .js--nav-btn {
+            background-color: $color-primary;
+            margin-top: 2rem;
+            display: inline-block ;
+            color: #fff ;
+            font-size: 2rem;
+       }
+    }
+    .closebtn {
+        display: inline-block;
+        font-size: 6rem;
+        color: $color-secondary;
+        text-decoration: none;
+        position: absolute;
+        right: 4rem;
+        top: 8rem;
+        padding: 2rem 3rem;
+    }
+}
+.js--nav-icon {
+    position: relative;
+    z-index: 1000;
+}
+
+

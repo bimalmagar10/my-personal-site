@@ -1,0 +1,22 @@
+{
+  "name": "dashain-project",
+  "version": "1.0.0",
+  "description": "cool animation project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "devServer": "live-server",
+    "start": "npm-run-all --parallel compile:sass devServer",
+    "build:css": "node-sass sass/main.scss css/style.comp.css",
+    "compress:css": "node-sass css/style.comp.css css/style.min.css --output-style compressed",
+    "build": "npm-run-all --parallel build:css compress:css"
+  },
+  "author": "bimal thapa magar",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;   //10/16 =0.625*100% = 62.5% 
+	@include respond(tab-land){
+		font-size: 56.25%;
+	}
+	@include respond(small-phone){
+		font-size: 50%;
+	}
+}
+body {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: $color-secondary;
+}
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+.fixed-btn {
+	position: fixed;	
+	background-color: $color-primary;
+	bottom: 8%;
+	right: 3%;
+	display: none;
+	opacity: 0;
+	cursor:pointer;
+	transform: translateY(20px);
+	z-index: 1;	
+	&__link {
+      text-decoration: none;
+      display: inline-block;
+      color: #fff;
+      font-size: 2.5rem;
+      padding: 2rem;
+	}
+}
+.fadeIn {
+	animation: fadeIn .5s ease-out;
+	animation-fill-mode: forwards;
+}
+.built-by {
+	display: inline-block;	
+	margin-left: 1rem;
+	background-color: $color-secondary;
+	padding: .5rem;
+	border-radius: 5px;
+	box-shadow: 1px 1px rgba(#fff,.5);
+	animation:hypnotize .5s ease-out;
+	animation-iteration-count: 5;
+}

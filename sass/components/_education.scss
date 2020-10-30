@@ -1,0 +1,60 @@
+.education {
+	&-box {
+       display: flex;
+       @include respond(phone){
+          flex-direction: column;
+       }
+	}
+	&__details {
+        flex: 0 0 50%;
+        margin-right: 15rem;
+        opacity: 0;
+        @include respond(tab-port){
+          margin-right: 10rem;
+        }
+        @include respond(phone){
+          flex:1;
+          margin-bottom: 10rem;
+          margin-right: 0;
+        }
+	}
+	&__text {
+       font-size: 2.3rem;
+       line-height: 1.4;
+       font-weight:300;
+	}
+	&__list {
+    opacity: 0;
+		list-style-type: none;
+		flex: 1;
+		&--item {
+           border-bottom: 1px solid rgba($color-primary,.4);
+           padding-bottom:.5rem;
+           &:not(:last-child){
+           	margin-bottom: 4rem;
+           }
+           display: flex;
+           justify-content: space-between;
+		}
+	}
+	&__icon {
+        text-decoration: none;
+        color: $color-primary;
+        font-size: 2.5rem;
+	}
+  &__description {
+    font-size: 1.5rem;
+    display: none;
+    & > *{
+      margin-bottom: 2rem;
+    }
+    & > ul {
+      list-style: disc;
+      padding-left: 3rem;
+    }
+  }
+  &__location {
+    color:$color-primary;
+  }
+
+}
