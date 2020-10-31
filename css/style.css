@@ -542,14 +542,17 @@ input[type="submit"] {
 .header {
   height: 100vh;
   padding: 0 7rem 4rem 7rem;
-  background-image: url(../sass/vendor/img/hero.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 90%; }
+  background-image: linear-gradient(100deg, #dfdcd4 0%, #dfdcd4 60%, #f5f4f1 40%); }
+  @media only screen and (max-width: 50em) {
+    .header {
+      background-image: linear-gradient(90deg, #dfdcd4 0%, #dfdcd4 50%, #f5f4f1 50%); } }
   @media only screen and (max-width: 37.5em) {
     .header {
       padding: 3.5rem;
       background-position: 80%; } }
+  @media only screen and (max-width: 25.875em) {
+    .header {
+      background-image: linear-gradient(360deg, #dfdcd4 0%, #dfdcd4 40%, #f5f4f1 60%); } }
   .header__box {
     height: 100%;
     display: flex;
