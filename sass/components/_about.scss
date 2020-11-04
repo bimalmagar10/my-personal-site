@@ -25,7 +25,7 @@
 	&__picture {
        flex:1;
        opacity: 0;
-       height:70rem;
+       height:50rem;
        @include respond(tab-port){
        	height:100%;
        }
@@ -37,5 +37,6 @@
 	&__img {
        width: 100%;
        height:100%;
+       object-fit:contain;
     }
 }

@@ -149,6 +149,8 @@ $(document).ready(function(){
           scrollAnimation(i,"fadeInUp");
         }       
     }
+
+    $('.header__profile-background').addClass("animate__animated animate__flipInX animate__delay-2s");
     /*------------------------------------------------------------------------------------*/
     /*--Animation Ends--*/
     /*------------------------------------------------------------------------------------*/

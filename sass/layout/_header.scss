@@ -1,3 +1,12 @@
+%corner {
+  content:"";
+  position:absolute;
+  height:1rem;
+  width:1rem;
+  background-color:white;
+  border:2px solid  $color-primary;
+  border-radius:50%;
+}
 .header {
 	height: 100vh;
 	padding: 0 7rem 4rem 7rem;
@@ -33,5 +42,64 @@
        	height: 100%;
        width:100%;
        }
+	}
+	&__profile-background {
+		align-self:flex-end;
+		height:30rem;
+		width:30rem;
+		background-color:#a7a7a2;
+		transform:translateY(20%);
+		border-radius:5px;
+		@include respond(tab-port) {
+			transform:translateY(0);
+		}
+		@include respond(small-phone) {
+			align-self:center;
+			background-color:transparent;
+		}
+	}
+	&__profile-photo {
+		height:30rem;
+		width:30rem;
+		position:relative;
+		border:1px solid  $color-secondary;
+		transform:translate(-20%,15%);
+		box-sizing:content-box;
+		@include respond(small-phone) {
+			transform:translate(0,0);
+		}
+		&::before {
+          @extend %corner;
+          left:0;
+          transform:translate(-50%,-50%);
+		}
+		&::after {
+			@extend %corner;
+			right:0;	
+			transform:translate(50%,-50%);
+		}
+		&  > span {
+			&::after {
+				@extend %corner;
+				left:0;
+				bottom:0;
+				transform:translate(-50%,50%);
+			}
+			&::before {
+				@extend %corner;
+				right:0;
+				bottom:0;
+				transform:translate(50%,50%);
+			}
+		}
+	}
+	&__img {
+		height:100%;
+		width:100%;
+		display:inline-block;
+		object-fit:cover;
+		filter:brightness(120%);
+        transform:scale(.94);
+        opacity:.9;
 	}
 }

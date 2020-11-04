@@ -14,5 +14,8 @@
    @if $breakpoint == phone-xs {
    	@media only screen and (max-width: 25.875em){@content;}
    }
+   @if $breakpoint == phone-xs-sm {
+      @media only screen and (max-width: 20em){@content;}
+   }
 
 }
