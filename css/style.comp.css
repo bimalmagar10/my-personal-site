@@ -51,6 +51,9 @@ html {
   @media only screen and (max-width: 37.5em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 20em) {
+    html {
+      font-size: 43.75%; } }
 
 body {
   box-sizing: border-box;
@@ -227,7 +230,7 @@ input[type="submit"] {
 .about__picture {
   flex: 1;
   opacity: 0;
-  height: 70rem; }
+  height: 50rem; }
   @media only screen and (max-width: 62.5em) {
     .about__picture {
       height: 100%; } }
@@ -238,7 +241,9 @@ input[type="submit"] {
 
 .about__img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; }
 
 .success__content {
   display: inline-block;
@@ -562,17 +567,29 @@ input[type="submit"] {
   .footer__copyright {
     line-height: 2; }
 
+.header__profile-photo::before, .header__profile-photo::after, .header__profile-photo > span::after, .header__profile-photo > span::before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border: 2px solid #407982;
+  border-radius: 50%; }
+
 .header {
   height: 100vh;
   padding: 0 7rem 4rem 7rem;
-  background-image: url(../sass/vendor/img/hero.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 90%; }
+  background-image: linear-gradient(100deg, #dfdcd4 0%, #dfdcd4 60%, #f5f4f1 40%); }
+  @media only screen and (max-width: 50em) {
+    .header {
+      background-image: linear-gradient(90deg, #dfdcd4 0%, #dfdcd4 50%, #f5f4f1 50%); } }
   @media only screen and (max-width: 37.5em) {
     .header {
       padding: 3.5rem;
       background-position: 80%; } }
+  @media only screen and (max-width: 25.875em) {
+    .header {
+      background-image: linear-gradient(360deg, #dfdcd4 0%, #dfdcd4 40%, #f5f4f1 60%); } }
   .header__box {
     height: 100%;
     display: flex;
@@ -588,6 +605,54 @@ input[type="submit"] {
   .header .logo__img {
     height: 100%;
     width: 100%; }
+  .header__profile-background {
+    align-self: flex-end;
+    height: 30rem;
+    width: 30rem;
+    background-color: #a7a7a2;
+    transform: translateY(20%);
+    border-radius: 5px; }
+    @media only screen and (max-width: 62.5em) {
+      .header__profile-background {
+        transform: translateY(0); } }
+    @media only screen and (max-width: 37.5em) {
+      .header__profile-background {
+        -ms-grid-row-align: center;
+            align-self: center;
+        background-color: transparent; } }
+  .header__profile-photo {
+    height: 30rem;
+    width: 30rem;
+    position: relative;
+    border: 1px solid #6b6b6b;
+    transform: translate(-20%, 15%);
+    box-sizing: content-box; }
+    @media only screen and (max-width: 37.5em) {
+      .header__profile-photo {
+        transform: translate(0, 0); } }
+    .header__profile-photo::before {
+      left: 0;
+      transform: translate(-50%, -50%); }
+    .header__profile-photo::after {
+      right: 0;
+      transform: translate(50%, -50%); }
+    .header__profile-photo > span::after {
+      left: 0;
+      bottom: 0;
+      transform: translate(-50%, 50%); }
+    .header__profile-photo > span::before {
+      right: 0;
+      bottom: 0;
+      transform: translate(50%, 50%); }
+  .header__img {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: brightness(120%);
+    transform: scale(0.94);
+    opacity: .9; }
 
 .section-about, .section-works, .section-contact {
   padding: 15rem 7rem;
